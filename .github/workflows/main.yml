@@ -18,3 +18,13 @@ jobs:
           node-version: 14
       - run: yarn install
       - run: yarn build-package
+      - name: macOS Binary
+        uses: actions/upload-artifact@v2
+        with:
+          name: quick-rename-macos
+          path: build/quick-rename-macos
+      - name: Window Binary
+        uses: actions/upload-artifact@v2
+        with:
+          name: quick-rename-win
+          path: build/quick-rename-win.exe
